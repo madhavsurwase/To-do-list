@@ -1,6 +1,6 @@
 "use client";
 
-import type * as React from 'react';
+import * as React from 'react';
 import { Trash2 } from "lucide-react";
 import type { Task } from "@/types";
 import { cn } from "@/lib/utils";
