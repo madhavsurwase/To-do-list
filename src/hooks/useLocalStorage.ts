@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
@@ -34,6 +35,11 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((val
   );
   
   useEffect(() => {
+    // This effect runs on mount and whenever the `key` changes.
+    // It reads the value from localStorage for the current `key`.
+    // If no item is found, it uses the `initialValue` from the closure,
+    // which is the `initialValue` passed to the hook during the render
+    // that set up this effect instance.
     setStoredValue(() => {
         if (typeof window === "undefined") {
           return initialValue;
@@ -46,7 +52,7 @@ function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((val
           return initialValue;
         }
       });
-  }, [key, initialValue]);
+  }, [key]); // Changed dependency from [key, initialValue] to [key]
 
 
   return [storedValue, setValue];
