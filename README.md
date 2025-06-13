@@ -27,7 +27,8 @@ A simple yet functional React To-Do List application that allows users to add, r
 
 ## 📸 Screenshots
 
-![image](https://github.com/user-attachments/assets/f120d777-f5ae-4c9b-8192-817623c90b6d)
+![image](https://github.com/user-attachments/assets/381acf9f-146b-4028-8332-21d1601c0dc0)
+
 
 
 ---
